@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+</head>
+<style>
+#rcorners6{
+   border-radius: 15px 15px;
+    background: #FF6347;
+    border: 1px solid #4C3C1B;
+    padding: 20px; 
+    margin-top:10px;
+    width: 95%;
+    height:500px;
+    margin-left:0.9cm;
+	margin-right:1cm;
+}
+
+body{
+background:#FFD39B;
+width:100%;
+height:auto;
+}
+.btn-success{
+    font-family: 'Oswald';
+    background: #CC3300;
+	border-radius: 9px 9px;
+	border: 1px solid #4C3C1B;
+	color:#fff;
+   font-size:45px
+    padding: 10px; 
+    width: 150px;
+    height: 30px;
+	font-weight: bold;
+   margin-left:1cm;
+   margin-bottom:1cm;
+    letter-spacing: 1px;
+  box-shadow: 0px 0px 8px #777;
+}
+#quiz-time-left{
+padding:18px;
+margin-top:10px;
+font-size:20px;
+margin-left:-0.5cm;
+}
+</style>
+<body>
+   <ul>
+	<div style="font-weight: bold" id="quiz-time-left"></div>
+	<script type="text/javascript">
+	var total_seconds = 60*10;
+	var c_minutes = parseInt(total_seconds/60);
+	var c_seconds = parseInt(total_seconds%60);
+
+	function CheckTime(){
+	document.getElementById("quiz-time-left").innerHTML
+	= 'Time Left: ' + c_minutes + ' minutes ' + c_seconds + ' seconds ' ;
+
+	if(total_seconds <=0){
+	setTimeout('document.quiz.submit()',1);
+	} else {
+	total_seconds = total_seconds -1;
+	c_minutes = parseInt(total_seconds/60);
+	c_seconds = parseInt(total_seconds%60);
+	setTimeout("CheckTime()",1000);
+	}}
+	setTimeout("CheckTime()",1000);
+	</script>
+<form method="post" action="ocjptest.html" > </form>
+	</ul>
+<div class="row">
+<div id='rcorners6'>
+	<p class="text-left"><strong>Q.1</strong><br> void waitForSignal() <br>{ <br> Object obj = new Object(); <br> synchronized (Thread.currentThread()) { <br> obj.wait(); <br> obj.notify(); <br> } <br> } <br>Which statement is true?
+    </p>
+<form action="result.php" method="post">
+    <input type="radio" name="q1" value="A"> This code can throw an InterruptedException.<br>
+    <input type="radio" name="q1" value="B">This code can throw an IllegalMonitorStateException.<br>
+    <input type="radio" name="q1" value="C">This code can throw a TimeoutException after ten minutes.<br>
+    <input type="radio" name="q1" value="D">Reversing the order of obj.wait() and obj.notify() might cause this method to complete normally.<br>
+    <input type="radio" name="q1" value="E">A call to notify() or notifyAll() from another thread might cause this method to complete normally.<br>
+    <input type="radio" name="q1" value="F">This code does NOT compile unless "obj.wait()" is replaced with "((Thread) obj).wait()".<br></div><hr>
+<div id='rcorners6'>
+    <p class="text-left">Q.2<br> Given: <br>public class TestString1 <br>{<br>public static void main(String[] args) <br>{ <br>String str = "420"; <br>str += 42;<br> System.out.print(str);<br>}<br>} <br>What is the output?
+    </p>
+<form action="result.php" method="post">
+    <input type="radio" name="q2" value="A">42<br>
+    <input type="radio" name="q2" value="B">420<br>
+    <input type="radio" name="q2" value="C">42042<br>
+    <input type="radio" name="q2" value="D">Compilation fails.<br>
+    <input type="radio" name="q2" value="E">An exception is thrown at runtime<br></div><hr>
+<div id='rcorners6'>
+    <p class="text-left">Q.3<br>A team of programmers is reviewing a proposed API for a new utility class. After some discussion, they realize that they can reduce the number of methods in the API without losing any functionality. If they implement the new design, which two OO principles will they be promoting?
+    </p>
+<form action="result.php" method="post">
+    <input type="radio" name="q3" value="A">Looser coupling<br>
+    <input type="radio" name="q3" value="B">Tighter coupling<br>
+    <input type="radio" name="q3" value="C">Lower cohesion<br>
+    <input type="radio" name="q3" value="D">Higher cohesion<br>
+    <input type="radio" name="q3" value="E">Weaker encapsulation<br>
+    <input type="radio" name="q3" value="F">Stronger encapsulation</br></div><hr>
+<div id='rcorners6'>
+    <p class="text-left">Q.4<br>Given:<br> interface Foo{}<br>class Alpha implements Foo{}<br>class Beta extends Alpha{}<br>class Delta extends Beta<br>{ <br> public static void main( String[] args ) <br>{ <br>Beta x =new Beta();<br> // insert code here <br>}<br> } <br>Which code, inserted will cause a java.lang.ClassCastException?
+    </p>
+<form action="result.php" method="post">
+    <input type="radio" name="q4" value="A">Alpha a = x;<br>
+    <input type="radio" name="q4" value="B">Foo f = (Delta)x;<br>
+    <input type="radio" name="q4" value="C">Foo f = (Alpha)x;<br>
+    <input type="radio" name="q4" value="D">Beta b = (Beta)(Alpha)x;<br></div><hr>
+<div id='rcorners6'>
+	<p class="text-left">Q.5<br>A company that makes Computer Assisted Design (CAD) software has, within its application, some utility classes that are used to perform 3D rendering tasks. The company's chief scientist has just improved the performance of one of the utility classes' key rendering algorithms, and has assigned a programmer to replace the old algorithm with the new algorithm. When the programmer begins researching the utility classes, she is happy to discover that the algorithm to be replaced exists in only one class. The programmer reviews that class's API, and replaces the old algorithm with the new algorithm, being careful that her changes adhere strictly to the class's API. Once testing has begun, the programmer discovers that other classes that use the class she changed are no longer working properly. What design flaw is most likely the cause of these new bugs?
+    </p>
+<form action="result.php" method="post">
+    <input type="radio" name="q5" value="A">Inheritance<br>
+    <input type="radio" name="q5" value="B">Tight coupling<br>
+    <input type="radio" name="q5" value="C">Low cohesion<br>
+    <input type="radio" name="q5" value="D">High cohesion<br>
+    <input type="radio" name="q5" value="E">Loose coupling<br></div><hr>
+<div id='rcorners6'>
+    <p class="text-left">Q.6<br>Given that the elements of a PriorityQueue are ordered according to natural ordering,and:<br>import java.util.*;<br> public class GetInLine <br>{<br> public static void main(String[] args)<br>{<br>PriorityQueue<String> pq = new PriorityQueue<String>();<br>pq.add("banana");<br> pq.add("pear");<br>pq.add("apple");<br> System.out.println(pq.poll() + " " + pq.peek());<br>}<br>}<br>What is the result?
+    </p>
+<form action="result.php" method="post">
+    <input type="radio" name="q6" value="A">apple pear<br>
+    <input type="radio" name="q6" value="B">banana pear<br>
+    <input type="radio" name="q6" value="C">apple apple<br>
+    <input type="radio" name="q6" value="D">apple banana<br>
+    <input type="radio" name="q6" value="E">banana banana<br></div><hr>
+<div id='rcorners6'>
+    <p class="text-left">Q.7<br>Given:<br>Runnable r = new Runnable()<br>{<br> public void run()<br>{<br> System.out.print("Cat");<br>}<br>};<br> Thread t = new Thread(r)<br>{<br>public void run()<br>{<br>System.out.print("Dog");<br>}<br>};<br>t.start(); <br>What is the result?
+    </p>
+<form action="result.php" method="post">
+    <input type="radio" name="q7" value="A">Cat<br>
+    <input type="radio" name="q7" value="B">Dog<br>
+    <input type="radio" name="q7" value="C">Compilation fails<br>
+    <input type="radio" name="q7" value="D">The code runs with no output<br>
+    <input type="radio" name="q7" value="E">An exception is thrown at runtime<br><hr></div>
+<div id='rcorners6'>
+    <p class="text-left">Q.8<br>Given the following six method names:<br>addListener<br> addMouseListener<br>setMouseListener<br> deleteMouseListener<br> removeMouseListener<br>registerMouseListener<br>How many of these method names follow JavaBean Listener naming rules?
+    </p>
+<form action="result.php" method="post">
+    <input type="radio" name="q8" value="A">1<br>
+    <input type="radio" name="q8" value="B">2<br>
+    <input type="radio" name="q8" value="C">3<br>
+    <input type="radio" name="q8" value="D">4<br>
+    <input type="radio" name="q8" value="E">5<br></div><hr>
+<div id='rcorners6'>
+    <p class="text-left">Q.9<br> A UNIX user named Bob wants to replace his chess program with a new one, but he is not sure where the old one is installed. Bob is currently able to run a Java chess program starting from his home directory /home/bob using the command: java -classpath /test:/home/bob/downloads/*.jar games. Chess Bob's CLASSPATH is set (at login time) to: /usr/lib:/home/bob/classes:/opt/java/lib:/opt/java/lib/*.jar What is a possible location for the Chess.class file?
+    </p>
+<form action="result.php" method="post">
+    <input type="radio" name="q9" value="A">/test/Chess.class<br>
+    <input type="radio" name="q9" value="B">/home/bob/Chess.class<br>
+    <input type="radio" name="q9" value="C">/test/games/Chess.class<br>
+    <input type="radio" name="q9" value="D">/usr/lib/games/Chess.class<br>
+    <input type="radio" name="q9" value="E">/home/bob/games/Chess.class<br></div><hr>
+<div id='rcorners6'>
+    <p class="text-left">Q.10<br>Given:<br>10. public class Foo<br>{<br> 11. static int[] a;<br>12. static { a[0]=2; } <br>13. public static void main( String[] args ) {} <br>14. }<br> Which exception or error will be thrown when a programmer attempts to run this code?
+    </p>
+<form action="result.php" method="post">
+    <input type="radio" name="q10" value="A"> java.lang.StackOverflowError<br>
+    <input type="radio" name="q10" value="B">java.lang.IllegalStateException<br>
+    <input type="radio" name="q10" value="C">java.lang.ExceptionInInitializerError<br>
+    <input type="radio" name="q10" value="D">java.lang.ArrayIndexOutOfBoundsException<br></div><hr>
+<input type="submit" class="btn btn-success" value="Submit">
+</form>
+</div>
+</body>
+</html>

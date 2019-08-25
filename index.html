@@ -1,0 +1,174 @@
+<!doctype html>
+<html lang="en" class="no-js">
+<head>
+	 <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+	<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700' rel='stylesheet' type='text/css'>
+
+	<link rel="stylesheet" href="css/reset.css"> <!-- CSS reset -->
+	<link rel="stylesheet" href="css/style.css"> <!-- Resource style -->
+	<script src="js/modernizr.js"></script> <!-- Modernizr -->
+  	
+	<title>3D Rotating Navigation | CodyHouse</title>
+<style>
+#big{
+border-radius: 15px 50px;
+    background: #3399FF;
+    padding: 20px; 
+    width: 1150px;
+    height: 420px;
+margin-left:2.9cm;
+}
+#rcorners6 {
+    border-radius: 15px 50px;
+    background: #333366;
+    padding: 20px; 
+    width: 400px;
+    height: 360px;
+margin-left:4cm;
+
+} 
+.button-3d{
+  display: inline-block;
+  padding: 15px 25px;
+  font-size: 20px;
+  cursor: pointer;
+  text-align: center;	
+  text-decoration: none;
+  outline: none;
+  color: #fff;
+  background-color: #3399FF;
+  border: none;
+   height:50px; 
+    width: 300px; 
+    padding-right:15px; 
+    padding-left:15px; 
+   border-top-right-radius: 30px;
+border-bottom-left-radius: 30px;
+border-top-left-radius: 15px;
+border-bottom-right-radius: 15px;
+}
+h1{
+font-family:Palace Script MT;
+font-weight:bold;
+letter-spacing:20px;
+font-size:40px;
+color:white;
+}
+h2{
+text-align:center;
+font-family:Monotype Corsiva;
+font-weight:bold;
+letter-spacing:2px;
+font-size:25px;
+color:white;
+}
+.button-3d:hover {background-color: #3e8e41}
+
+.button-3d:active {
+  background-color: #3e8e41;
+  box-shadow: 0 5px #777;
+  transform: translateY(4px);
+}
+#rcorners1 {
+    border-radius: 100px;
+    background: #73AD21;
+    padding: 0px; 
+    width: 300px;
+    height: 250px; 
+}
+@-webkit-keyframes spincube{
+from,to { -webkit-transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg); }
+16% { -webkit-transform: rotateY(-90deg);}
+}
+#spinner div{
+position: absolute;
+width :120px;
+height:120px;
+border: 1px solid #ccc;
+background: rgba(255,255,255,0.8);
+box-shadow: inset 0 0 20px rgba(0,0,0,0.2);
+text-align: center;
+line-height: 120px;
+font-size: 100px;
+}
+#spinner .face1{  -webkit-transform: transalteZ(60px); }
+#spinner .face2{ -webkit-transform: rotateY(90deg) translateZ(60px); }
+#spinner .face3{  -webkit-transform: rotateY(90deg) rotateX(90deg) translateZ(60px); }
+#spinner .face4{  -webkit-transform: rotateY(180deg) rotateZ(90deg) translateZ(60px); }
+#spinner .face5{  -webkit-transform: rotateY(-90deg) rotateZ(90deg) translateZ(60px); }
+#spinner .face6{ -webkit-transform: rotateX(-90deg) translateZ(60px); }
+</style>
+</head>
+<body>
+	<header class="cd-header">
+		<a href="#0" class="cd-logo">
+<div class="stage" style="width:120px; height:120px;">
+<div class="cubespinner">
+<div class="face1">1</div>
+<div class="face1">2</div>
+<div class="face1">3</div>
+<div class="face1">4</div>
+<div class="face1">5</div>
+<div class="face1">6</div>
+</div></div>
+</a>
+		<a href="#0" class="cd-3d-nav-trigger">
+			Menu
+			<span></span>
+		</a>
+	</header> <!-- .cd-header -->
+	
+	<main>
+		<h1></h1>
+		<!-- all your content here -->
+	</main>
+	
+	<nav class="cd-3d-nav-container">
+		<ul class="cd-3d-nav">
+			<li class="cd-selected">
+				<a href="#0">Home</a>
+			</li>
+
+			<li>
+				<a href="#0">Tips for test</a>
+			</li>
+
+			<li>
+				<a href="#0">Images</a>
+			</li>
+
+			<li>
+				<a href="#0">Settings</a>
+			</li>
+
+			<li>
+				<a href="#0">New</a>
+			</li>
+		</ul> <!-- .cd-3d-nav -->
+
+		<span class="cd-marker color-1"></span>	
+	</nav> <!-- .cd-3d-nav-container -->
+<script src="js/jquery-2.1.1.js"></script>
+<script src="js/main.js"></script> <!-- Resource jQuery -->
+<div id="big">
+<div class="row">
+  <div class="col-sm-8">
+<div id="rcorners6">
+<b><a href="ocjptest.html" class="button-3d">OCPJP TEST</a></b><br><br>
+<b><a href="#" class="button-3d">OCJA TEST</a></b><br><br>
+<b><a href="#" class="button-3d">J2EE TEST</a></b><br><br>
+<b><a href="#" class="button-3d">Android TEST</a></b><br><br>
+</div>
+</div>
+  <div class="col-sm-4">
+<h1>WELCOME</h1></br></br></br></br>
+<div id="rcorners1"></br></br></br>
+<h2>DON'T   STRESS</br></br>DO   YOUR   BEST</br></br>FORGET   THE   REST.</h2></div></div>
+</div></div>
+</body>
+</html>

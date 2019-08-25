@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Theme Simply Me</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700' rel='stylesheet' type='text/css'>
+
+	<link rel="stylesheet" href="css/reset.css"> <!-- CSS reset -->
+	<link rel="stylesheet" href="css/style.css"> <!-- Resource style -->
+	<script src="js/modernizr.js"></script> <!-- Modernizr -->
+
+<style>
+#nav{
+background-color:#FF6347;
+}
+#rc{
+    border-radius: 15px 15px;
+    background: #F17F50;
+    padding: 20px; 
+    width: 1300px;
+font-family: 'Trocchi', serif;
+    height: 950px;
+margin-left:0.5cm;
+margin-bottom:1cm;
+} 
+#padding{
+	margin-top:10px;
+}
+#id01{
+border-radius: 15px 15px;
+width: 1300px;
+margin-left:0.5cm;
+background: #F17F50;
+ line-height: 1.4;
+color:white;
+font-weight: bold;
+font-size: 14px;
+}
+body{
+background-color: #FFFAF0;
+width:100%;
+height:auto;
+}
+#l1{
+background: #F17F50;
+ line-height: 1.8;
+color:white;
+font-weight: bold;
+font-size: 20px;
+}
+a{
+    text-decoration: none;
+    color:black !important;
+}
+#title1{
+text-align:left;
+font-family:Bodoni MT Black;
+font-weight:bold;
+font-size:20px;
+margin-left:20px;
+}
+a:hover{
+    text-decoration: underline;
+    color:white !important ;
+}
+</style>
+</head>
+<body>
+    <header class="cd-header">
+		<a href="#0" class="cd-logo">
+<div>
+</a>
+		<a href="#0" class="cd-3d-nav-trigger">
+			Menu
+			<span></span>
+		</a>
+	</header> <!-- .cd-header -->
+	
+	<main>
+		<h1></h1>
+		<!-- all your content here -->
+	</main>
+	
+	<nav class="cd-3d-nav-container">
+		<ul class="cd-3d-nav">
+			<li >
+				<a href="firstpage.html">Home</a>
+			</li>
+			
+
+			<li>
+				<a href="about.html">About</a>
+			</li>
+			<li class="cd-selected">
+				<a href="ocjptesttips.html">Tips for test</a>
+			</li>
+			<li >
+				<a href="feedback.html">Feedback</a>
+			</li>
+			<li>
+				<a href="logout.php">Logout</a>
+			</li>		</ul> <!-- .cd-3d-nav -->
+
+		
+	</nav> <!-- .cd-3d-nav-container -->
+<script src="js/jquery-2.1.1.js"></script>
+<script src="js/main.js"></script> <!-- Resource jQuery -->
+ <br>
+<div id="id01"></div>
+<script>
+myFunction([
+{
+"display": "JavaScript Tutorial",
+"url": "http://www.w3schools.com/js/default.asp"
+},
+{
+"display": "HTML Tutorial",
+"url": "http://www.w3schools.com/html/default.asp"
+},
+{
+"display": "CSS Tutorial",
+"url": "http://www.w3schools.com/css/default.asp"
+}
+]);
+
+function myFunction(arr) {
+    var out = "";
+    var i;
+    for(i = 0; i<arr.length; i++) {
+        out += '<a href="' + arr[i].url + '">' + 
+        arr[i].display + '</a>'+"</br>"+"</br>";
+    }
+    document.getElementById("id01").innerHTML = out;
+}
+</script>
+<h1  id="title1" >OCPJP   TIPS</h1>
+<div id="padding">
+<div id="rc"><pre  id="l1">
+•	Java characters are 16-bit unicode characters, and they can be initialized in the following ways:
+	char c1 = '\u0057'
+	char c1 = 'w'
+	char c1 = 87
+	char c1 = (char) 87 (acc to RHE)
+	char c1 = '\r'
+•	instanceof operator can take a class, an interface or an array type as an argument.
+•	To test if an object is an array, use: myObject.getClass().isArray();
+•	MenuContainer interface is implemented by Container, Frame, Menu and MenuBar
+•	An identifier must begin with a letter, a dollar sign ($), or an underscore. 
+	Subsequent characters maybe letters, $, underscore, or digits, but NOT other characters liek %, &, etc.
+•	The keywords syncrhonized, private and protected cannot be used with a class.
+•	A variable declared inside a try block cannot be used in the catch block.
+•	If no super-class constructor is explicitly called, and there is no call to other
+	 constructor (using this(..)), the default constructor of the superclass (w/o any arguments) is automatically called.
+•	wait(), notify() and notifyAll() are the instance methods of Object class, not Thread
+	 class (but they are inherited by Thread class).
+•	stop(), suspend() and resume() are deprecated methods in Java 1.2
+•	References to member methods are resolved at runtime using the type of object, but the
+	references to member variables are computed at compile time using the type of the reference.</pre>
+</div>
+</div>
+<h1  id="title1" >OCJA   TIPS</h1>
+<div id="padding">
+<div id="rc"><pre id="l1">
+•	Java characters are 16-bit unicode characters, and they can be initialized in the following ways:
+	char c1 = '\u0057'
+	char c1 = 'w'
+	char c1 = 87
+	char c1 = (char) 87 (acc to RHE)
+	char c1 = '\r'
+•	instanceof operator can take a class, an interface or an array type as an argument.
+•	To test if an object is an array, use: myObject.getClass().isArray();
+•	MenuContainer interface is implemented by Container, Frame, Menu and MenuBar
+•	An identifier must begin with a letter, a dollar sign ($), or an underscore. 
+	Subsequent characters maybe letters, $, underscore, or digits, but NOT other characters liek %, &, etc.
+•	The keywords syncrhonized, private and protected cannot be used with a class.
+•	A variable declared inside a try block cannot be used in the catch block.
+•	If no super-class constructor is explicitly called, and there is no call to other
+	 constructor (using this(..)), the default constructor of the superclass (w/o any arguments) is automatically called.
+•	wait(), notify() and notifyAll() are the instance methods of Object class, not Thread
+	 class (but they are inherited by Thread class).
+•	stop(), suspend() and resume() are deprecated methods in Java 1.2
+•	References to member methods are resolved at runtime using the type of object, but the
+	references to member variables are computed at compile time using the type of the reference.</pre>
+</div>
+</div>
+</body>
+</html>
